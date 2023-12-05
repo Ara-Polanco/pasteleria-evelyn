@@ -1,0 +1,32 @@
+{
+  "name": "pasteleriaevelyn",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ara-Polanco/pasteleria-evelyn.git"
+  },
+  "author": "Araceli Polanco",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ara-Polanco/pasteleria-evelyn/issues"
+  },
+  "homepage": "https://github.com/Ara-Polanco/pasteleria-evelyn#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.16",
+    "gulp": "^4.0.2",
+    "gulp-postcss": "^9.0.1"
+  },
+  "dependencies": {
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.69.5"
+  },
+  "browserslist": [
+    "last 1 version",
+    "> 1%"
+  ]
+}
