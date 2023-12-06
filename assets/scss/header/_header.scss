@@ -1,0 +1,35 @@
+@use '../base/variables' as v;
+
+.header__barra {
+    padding: v.$separacion 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: v.$separacion;
+
+    border: 3px solid red;
+}
+.header__logo {
+    font-family: v.$fuenteLogo;
+    font-size: 2.5rem;
+    letter-spacing: 4px;
+    font-weight: 400;
+    color: v.$rosa;
+    color: v.$verde;
+    width: 15rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+    border: 3px solid purple;
+}
+
+
+.navegacion {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}

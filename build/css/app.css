@@ -318,6 +318,7 @@ html {
 }
 
 *, *:before, *:after {
+  margin: 0;
   box-sizing: inherit;
 }
 
@@ -343,4 +344,43 @@ img {
   width: 90%;
   max-width: 120rem;
   margin: 0 auto;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.bg-primario {
+  background: #dde1ea;
+}
+
+.header__barra {
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+  border: 3px solid red;
+}
+
+.header__logo {
+  font-family: "Beau Rivage", cursive;
+  font-size: 2.5rem;
+  letter-spacing: 4px;
+  font-weight: 400;
+  color: #efb3cb;
+  color: #BCE29E;
+  width: 15rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  border: 3px solid purple;
+}
+
+.navegacion {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
 }
