@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Beau+Rivage&family=Roboto:wght@400;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="build/css/app.css">
     <title>Pastelería Evelyn</title>
   
@@ -25,7 +26,7 @@
                 </div>
 
                 <nav class="navegacion">
-                    <a href="index.html">Inicio</a>
+                    <a href="index.html" class="activo">Inicio</a>
                     <a href="nosotros.html">Nosotros</a>
                     <a href="productos.html">Productos</a>
                     <a href="proceso.html">Proceso</a>
@@ -38,8 +39,45 @@
                 <h1 class="header__texto text-center" >Celebramos Contigo </h1>
             </div>
         </div>
-
     </header>
+
+    <main class="principal contenedor text-center">
     
+        <h2 class="principal__titulo encabezados">Conócenos</h2>
+        <p class="principal__descripcion" >Sólo utilizamos ingredientes frescos y naturales; cada pastel es hecho con cariño y uno a uno, de manera artesanal.</p>
+            
+        <div class="galeria">
+            <div class="galeria__categoria">
+                <img src="build/img/pastel-5.jpg" alt="Categoria pasteles" class="galeria__img">
+                <p class="galeria__descripcion">Pasteles</p>
+            </div>
+
+            <div class="galeria__categoria">
+                <img src="build/img/tarta-3.jpg" alt="Categoria pasteles" class="galeria__img">
+                <p class="galeria__descripcion">Tartas</p>
+            </div>
+
+            <div class="galeria__categoria">
+                <img src="build/img/cheesecake.jpg" alt="Categoria pasteles" class="galeria__img">
+                <p class="galeria__descripcion">Cheesecake</p>
+            </div>
+
+            <div class="galeria__categoria">
+                <img src="build/img/gelatina-1.jpg" alt="Categoria pasteles" class="galeria__img">
+                <p class="galeria__descripcion">Gelatinas</p>
+            </div>
+
+            <div class="galeria__categoria">
+                <img src="build/img/antojos-1.jpg" alt="Categoria pasteles" class="galeria__img">
+                <p class="galeria__descripcion">Antojos</p>
+            </div>
+        </div>
+
+
+    </main>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>

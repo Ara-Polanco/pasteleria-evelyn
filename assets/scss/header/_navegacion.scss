@@ -1,0 +1,16 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+
+.navegacion {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: .8rem;
+
+    @include m.tablet { 
+        flex-direction: row;
+        gap: 2rem;
+    }
+}

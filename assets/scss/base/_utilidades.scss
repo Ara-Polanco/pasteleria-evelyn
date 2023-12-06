@@ -5,5 +5,11 @@
     text-align: center;
 }
 
-
+.encabezados {
+    margin: 0 auto;
+    width: 90%;
+    color: v.$blanco;
+    background: #efb3cb;
+    clip-path: polygon(100% 0,96% 50%,100% 100%,0 100%,4% 50%,0 0);
+}
 

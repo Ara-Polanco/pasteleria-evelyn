@@ -7,66 +7,19 @@
     background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
-
-
-    .header__contenido {
-
-        .header__barra {
-            padding: 2rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: v.$separacion;
-    
-            @include m.tablet { 
-                flex-direction: row;
-                justify-content: space-between;  
-            }
-    
-            .header__logo {
-                font-family: v.$fuenteLogo;
-                letter-spacing: 4px;
-                font-weight: 600; /* Borrar? */
-                font-size: 3rem;
-                color: v.$rosa;
-                color: v.$claro;
-                text-shadow: 1px 1px 1px v.$claro;
-                text-shadow: 1px 1px 1px v.$rosa;
-    
-                width: 15rem;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                gap: 1rem; 
-            }
-    
-            .navegacion {
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                gap: 1rem;
-    
-                @include m.tablet { 
-                    flex-direction: row;
-                    gap: 2rem;
-                }
-            }
-        }
-
-    }
-    
+    background-position: center;  
+    position: relative;
+  
 }
 
 .header__titulo {
 
-    padding: v.$separacion 0 0 0;
- 
-    
     .header__texto {
         color: v.$claro;
         text-shadow: 1px 1px 2px v.$rosa;
+    }
+    @include m.tablet { 
+        padding: 10rem 0 0 0;
     }
 }
 

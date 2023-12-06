@@ -1,0 +1,32 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+h1, h2, h3 {
+    text-transform: uppercase;
+    font-family: v.$fuentePrincipal;
+    letter-spacing: 3px;
+}
+
+h1 {
+    font-size: 3rem;
+}
+h2 {
+    font-size: 2.5rem;
+}
+h3 {
+    font-size: 2rem;
+}
+@include m.tablet { 
+    h1 {
+        font-size: 3.5rem;
+    }
+    
+    h2 {
+        font-size: 3rem;
+    }
+    h3 {
+        font-size: 2.5rem;
+    }
+}
+
+

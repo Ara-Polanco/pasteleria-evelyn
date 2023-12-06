@@ -326,6 +326,7 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
   line-height: 1.8;
+  background-color: #E9E8E8;
 }
 
 a {
@@ -336,9 +337,13 @@ a {
   transition-duration: 0.5s;
   transition-property: font-size;
 }
+a.activo {
+  color: #efb3cb;
+}
 
 a:hover {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  color: #efb3cb; /* Mantener? */
 }
 
 img {
@@ -347,7 +352,7 @@ img {
 }
 
 .contenedor {
-  width: 90%;
+  width: 75%;
   max-width: 120rem;
   margin: 0 auto;
 }
@@ -356,59 +361,178 @@ img {
   text-align: center;
 }
 
+.encabezados {
+  margin: 0 auto;
+  width: 90%;
+  color: #fff;
+  background: #efb3cb;
+  -webkit-clip-path: polygon(100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%, 0 0);
+          clip-path: polygon(100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%, 0 0);
+}
+
+h1, h2, h3 {
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 3px;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 3.5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2.5rem;
+  }
+}
 .header {
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  position: relative;
 }
-.header .header__contenido .header__barra {
-  padding: 2rem;
+
+.header__titulo .header__texto {
+  color: #E9E8E8;
+  text-shadow: 1px 1px 2px #efb3cb;
+}
+@media (min-width: 768px) {
+  .header__titulo {
+    padding: 10rem 0 0 0;
+  }
+}
+
+.header__barra {
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5rem;
+  gap: 2rem;
 }
 @media (min-width: 768px) {
-  .header .header__contenido .header__barra {
+  .header__barra {
     flex-direction: row;
     justify-content: space-between;
   }
 }
-.header .header__contenido .header__barra .header__logo {
+.header__barra .header__logo {
   font-family: "Beau Rivage", cursive;
   letter-spacing: 4px;
-  font-weight: 600; /* Borrar? */
   font-size: 3rem;
-  color: #efb3cb;
   color: #E9E8E8;
-  text-shadow: 1px 1px 1px #E9E8E8;
-  text-shadow: 1px 1px 1px #efb3cb;
+  text-shadow: 0 0 1px #efb3cb;
   width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
 }
-.header .header__contenido .header__barra .navegacion {
+
+.navegacion {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1rem;
+  gap: 0.8rem;
 }
 @media (min-width: 768px) {
-  .header .header__contenido .header__barra .navegacion {
+  .navegacion {
     flex-direction: row;
     gap: 2rem;
   }
 }
 
-.header__titulo {
-  padding: 5rem 0 0 0;
+.principal {
+  background-color: #fff;
+  padding: 5rem 2rem;
 }
-.header__titulo .header__texto {
-  color: #E9E8E8;
-  text-shadow: 1px 1px 2px #efb3cb;
+@media (min-width: 768px) {
+  .principal {
+    padding: 7rem 2rem;
+    margin-top: -7rem;
+    position: relative;
+    border-radius: 3rem;
+  }
+}
+.principal .principal__descripcion {
+  margin: 2.5rem 0;
+}
+
+.galeria {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin: 0 auto; /* Verificar que se haya scentrado el s */
+}
+@media (min-width: 768px) {
+  .galeria {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+}
+.galeria .galeria__categoria {
+  border-radius: 3rem;
+  overflow: hidden;
+  border: 2px solid #efb3cb;
+}
+@media (min-width: 768px) {
+  .galeria .galeria__categoria {
+    width: 45%;
+  }
+}
+@media (min-width: 1024px) {
+  .galeria .galeria__categoria {
+    width: 30%;
+  }
+}
+.galeria .galeria__categoria .galeria__img {
+  transition-duration: 0.5s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  width: 100%;
+  height: 20rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.galeria .galeria__categoria .galeria__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.galeria .galeria__categoria .galeria__descripcion {
+  background-color: #efb3cb;
+  color: #fff;
+  letter-spacing: 3px;
+  padding: 1rem 0;
+  position: relative;
+}
+
+.slider {
+  overflow: hidden;
+}
+.slider__slider {
+  height: 100%;
+  flex-shrink: 0;
+  width: 100%;
+  position: relative;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
 }
