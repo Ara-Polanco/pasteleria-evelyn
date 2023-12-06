@@ -14,15 +14,21 @@ html {
 body {
     font-family: v.$fuentePrincipal;
     font-size: 1.6rem;
+    line-height: 1.8;
 
 }
 
-p {
- /*    color: v.$negro; */
-}
 
 a {
     text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: v.$claro;
+    transition-duration: .5s;
+    transition-property: font-size;
+}
+a:hover {
+    font-size: 2rem;
 }
 
 img {

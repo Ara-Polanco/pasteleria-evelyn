@@ -325,14 +325,20 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   font-size: 1.6rem;
-}
-
-p {
-  /*    color: v.$negro; */
+  line-height: 1.8;
 }
 
 a {
   text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: #E9E8E8;
+  transition-duration: 0.5s;
+  transition-property: font-size;
+}
+
+a:hover {
+  font-size: 2rem;
 }
 
 img {
@@ -350,37 +356,59 @@ img {
   text-align: center;
 }
 
-.bg-primario {
-  background: #dde1ea;
+.header {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-
-.header__barra {
-  padding: 5rem 0;
+.header .header__contenido .header__barra {
+  padding: 2rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   gap: 5rem;
-  border: 3px solid red;
 }
-
-.header__logo {
+@media (min-width: 768px) {
+  .header .header__contenido .header__barra {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+.header .header__contenido .header__barra .header__logo {
   font-family: "Beau Rivage", cursive;
-  font-size: 2.5rem;
   letter-spacing: 4px;
-  font-weight: 400;
+  font-weight: 600; /* Borrar? */
+  font-size: 3rem;
   color: #efb3cb;
-  color: #BCE29E;
+  color: #E9E8E8;
+  text-shadow: 1px 1px 1px #E9E8E8;
+  text-shadow: 1px 1px 1px #efb3cb;
   width: 15rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  border: 3px solid purple;
+}
+.header .header__contenido .header__barra .navegacion {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .header .header__contenido .header__barra .navegacion {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 
-.navegacion {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+.header__titulo {
+  padding: 5rem 0 0 0;
+}
+.header__titulo .header__texto {
+  color: #E9E8E8;
+  text-shadow: 1px 1px 2px #efb3cb;
 }
