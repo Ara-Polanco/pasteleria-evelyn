@@ -25,7 +25,7 @@
         border: 2px solid v.$rosa;
 
         @include m.tablet { 
-       /*      width: 45%; */
+       /*      width: 45%;       Solo para la galeria, aqui no es necesario*/
         }
         @include m.desktop { 
            /*  width: 30%; */
@@ -40,7 +40,7 @@
             object-fit: cover;
 
             @include m.tablet { 
-                height: 35rem;
+                height: 35rem;  /* Mantener para el slider */
             }
 
             &:hover{

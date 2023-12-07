@@ -1,0 +1,43 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.sucursales {
+    background-image: linear-gradient(rgba(255, 192, 203, 0.259), rgba(255, 192, 203, 0.259)), url(/build/img/watercolor.png);
+    background-repeat: repeat;
+    background-size: cover;
+
+    padding: v.$separacion 0;
+
+    @include m.tablet { 
+        margin-top: -10rem ;
+        padding: 15rem 2rem 10rem 2rem;  /* Checar el padding bottom */
+    }
+
+    .sucursales__contenido {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        @include m.tablet { 
+            gap: 4rem;
+        }
+        .sucursales__texto {
+            @include m.tablet { 
+                margin: 0 auto;
+                max-width: 80%;
+            }
+        } 
+        .sucursales__imagen {
+            border-radius: 3rem;
+            overflow: hidden;
+            border: 3px solid v.$rosa;
+            margin: 0 auto;    
+            @include m.tablet { 
+                max-width: 80%;
+            }
+            @include m.desktop { 
+                max-width: 65%;
+            }
+        }
+    }
+}
+

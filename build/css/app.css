@@ -328,6 +328,11 @@ body {
   line-height: 1.8;
   background-color: #E9E8E8;
 }
+@media (min-width: 768px) {
+  body {
+    font-size: 1.8rem;
+  }
+}
 
 a {
   text-decoration: none;
@@ -464,7 +469,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .principal {
-    padding: 10rem 2rem 3rem 2rem;
+    padding: 10rem 2rem;
     margin-top: -10rem;
     position: relative;
     border-radius: 3rem;
@@ -497,10 +502,10 @@ h3 {
 }
 @media (min-width: 768px) {
   .galeria .galeria__categoria {
-    /*      width: 45%; */
+    /*      width: 45%;       Solo para la galeria, aqui no es necesario*/
   }
 }
-@media (min-width: 1024px) {
+@media (min-width: 992px) {
   .galeria .galeria__categoria {
     /*  width: 30%; */
   }
@@ -517,7 +522,7 @@ h3 {
 }
 @media (min-width: 768px) {
   .galeria .galeria__categoria .galeria__img {
-    height: 35rem;
+    height: 35rem; /* Mantener para el slider */
   }
 }
 .galeria .galeria__categoria .galeria__img:hover {
@@ -533,7 +538,7 @@ h3 {
 }
 
 .galeria {
-  width: 80%;
+  width: 90%;
   position: relative;
   overflow: hidden;
 }
@@ -558,4 +563,49 @@ h3 {
 }
 .galeria .swiper-pagination-bullet-active {
   background-color: rgb(237, 73, 100);
+}
+
+.sucursales {
+  background-image: linear-gradient(rgba(255, 192, 203, 0.259), rgba(255, 192, 203, 0.259)), url(/build/img/watercolor.png);
+  background-repeat: repeat;
+  background-size: cover;
+  padding: 5rem 0;
+}
+@media (min-width: 768px) {
+  .sucursales {
+    margin-top: -10rem;
+    padding: 15rem 2rem 10rem 2rem; /* Checar el padding bottom */
+  }
+}
+.sucursales .sucursales__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .sucursales .sucursales__contenido {
+    gap: 4rem;
+  }
+}
+@media (min-width: 768px) {
+  .sucursales .sucursales__contenido .sucursales__texto {
+    margin: 0 auto;
+    max-width: 80%;
+  }
+}
+.sucursales .sucursales__contenido .sucursales__imagen {
+  border-radius: 3rem;
+  overflow: hidden;
+  border: 3px solid #efb3cb;
+  margin: 0 auto;
+}
+@media (min-width: 768px) {
+  .sucursales .sucursales__contenido .sucursales__imagen {
+    max-width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .sucursales .sucursales__contenido .sucursales__imagen {
+    max-width: 65%;
+  }
 }

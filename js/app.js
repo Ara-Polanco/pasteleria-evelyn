@@ -1,7 +1,4 @@
 
-
-
-
 window.swiper = new Swiper( {
     el: '.galeria',
     slideClass: 'galeria__categoria',
@@ -13,15 +10,6 @@ window.swiper = new Swiper( {
     spaceBetween: 50,
     pagination: true,
     navigation: true
-/* 
-    autoplay: {
-        delete: 5000
-    },
-    spaceBetween:70,
-    loop: true,
-    pagination: true,
-    navigation: true
-     */
 })
 
 
