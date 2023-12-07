@@ -17,19 +17,19 @@
 
     .swiper-button-next, 
     .swiper-button-prev{
-        color: v.$claro;
-        text-shadow: 1px 1px 2px v.$rosa;
+        color: v.$rosa;
+        text-shadow: 1px 1px 1px v.$blanco;
     }
 
     .swiper-pagination {
         position: relative;
     }
     .swiper-pagination-bullet {
-        background-color: v.$rosa;
-        opacity: .5;
+        background-color: pink;
+        opacity: .8;
     }
     .swiper-pagination-bullet-active {
-        background-color: rgb(237, 73, 100);
+        background-color: v.$rosa;
     }
 }
 

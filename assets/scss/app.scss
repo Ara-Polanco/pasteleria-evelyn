@@ -1,4 +1,10 @@
 @use 'base';
+@use 'header';
+@use 'inicio';
+@use 'footer';
+
+/* 
+@use 'base';
 @use 'header/header';
 @use 'header/barra';
 @use 'header/navegacion';
@@ -7,5 +13,6 @@
 @use 'inicio/slider';
 @use 'inicio/sucursales';
 @use 'inicio/testimoniales';
+@use 'footer/footer';
 
-
+*/

@@ -34,10 +34,11 @@ a {
 
     &.activo {
         color: v.$rosa;
+        text-shadow: 0 0 2px v.$blanco;
     }
 }
 a:hover {
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: v.$rosa;     /* Mantener? */
 }
 
@@ -49,7 +50,6 @@ img {
 span{
     font-weight: bold;
 }
-
 .contenedor {
     width: 75%;
     max-width: 120rem;

@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 
 h1, h2, h3 {
-    text-transform: uppercase;
+    text-transform: capitalize;
     font-family: v.$fuentePrincipal;
     letter-spacing: 3px;
 }
