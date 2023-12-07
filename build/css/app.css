@@ -464,8 +464,8 @@ h3 {
 }
 @media (min-width: 768px) {
   .principal {
-    padding: 7rem 2rem;
-    margin-top: -7rem;
+    padding: 10rem 2rem 3rem 2rem;
+    margin-top: -10rem;
     position: relative;
     border-radius: 3rem;
   }
@@ -477,14 +477,17 @@ h3 {
 .galeria {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 2.5rem;
-  margin: 0 auto; /* Verificar que se haya scentrado el s */
+  margin: 0 auto;
+  width: 90%;
 }
 @media (min-width: 768px) {
   .galeria {
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    /*     flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap; */
   }
 }
 .galeria .galeria__categoria {
@@ -494,12 +497,12 @@ h3 {
 }
 @media (min-width: 768px) {
   .galeria .galeria__categoria {
-    width: 45%;
+    /*      width: 45%; */
   }
 }
 @media (min-width: 1024px) {
   .galeria .galeria__categoria {
-    width: 30%;
+    /*  width: 30%; */
   }
 }
 .galeria .galeria__categoria .galeria__img {
@@ -508,9 +511,14 @@ h3 {
   transition-property: transform;
   transition-property: transform, -webkit-transform;
   width: 100%;
-  height: 20rem;
+  height: 25rem;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media (min-width: 768px) {
+  .galeria .galeria__categoria .galeria__img {
+    height: 35rem;
+  }
 }
 .galeria .galeria__categoria .galeria__img:hover {
   -webkit-transform: scale(1.1);
@@ -524,15 +532,30 @@ h3 {
   position: relative;
 }
 
-.slider {
+.galeria {
+  width: 80%;
+  position: relative;
   overflow: hidden;
 }
-.slider__slider {
+.galeria .galeria__categoria {
   height: 100%;
   flex-shrink: 0;
   width: 100%;
   position: relative;
-  transition-property: -webkit-transform;
-  transition-property: transform;
-  transition-property: transform, -webkit-transform;
+  box-sizing: border-box; /* Con esto no se desborda */
+}
+.galeria .swiper-button-next,
+.galeria .swiper-button-prev {
+  color: #E9E8E8;
+  text-shadow: 1px 1px 2px #efb3cb;
+}
+.galeria .swiper-pagination {
+  position: relative;
+}
+.galeria .swiper-pagination-bullet {
+  background-color: #efb3cb;
+  opacity: 0.5;
+}
+.galeria .swiper-pagination-bullet-active {
+  background-color: rgb(237, 73, 100);
 }

@@ -7,18 +7,12 @@
     padding: v.$separacion 2rem;
 
     @include m.tablet { 
-        padding: 7rem 2rem;
-        margin-top: -7rem;
+        padding: 10rem 2rem 3rem 2rem;
+        margin-top: -10rem;
         position: relative;
-        border-radius: 3rem;
-   
+        border-radius: 3rem; 
     }
-
-    .principal__titulo {
-        
-     
-    }
-
+ 
     .principal__descripcion {
         margin: 2.5rem 0;
     }
