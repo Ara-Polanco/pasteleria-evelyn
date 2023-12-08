@@ -27,24 +27,25 @@ body {
 a {
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 600;
+    font-weight: 900;
     color: v.$claro;
     transition-duration: .5s;
     transition-property: font-size;
 
     &.activo {
-        color: v.$rosa;
-        text-shadow: 0 0 2px v.$blanco;
+        color: v.$rosa; 
+        text-shadow: 0 0 5px v.$blanco;
     }
 }
 a:hover {
     font-size: 2rem;
-    color: v.$rosa;     /* Mantener? */
+    color: v.$rosa;   
 }
 
 img {
     max-width: 100%;
     display: block;
+    height: auto;
 }
 
 span{

@@ -12,12 +12,15 @@
 }
 
 .footer__contenido {
-    background-color: v.$blanco;
     padding: 3rem;
+    background-color: v.$blanco;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+
     display: flex;
     flex-direction: column;
     gap: 3rem;
-  
+
     @include m.tablet { 
         flex-direction: row;
         justify-content: space-around;
@@ -32,7 +35,7 @@
             margin-bottom: 2rem;
 
             @include m.tablet {
-                padding: 1rem; 
+                padding: 0 1rem; 
                 font-size: 1.6rem;
             }
             @include m.desktop { 

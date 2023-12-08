@@ -4,7 +4,7 @@ window.swiper = new Swiper( {
     slideClass: 'galeria__categoria',
     createElements: true,
     autoplay: {
-        delay: 5000
+        delay: 4000
     },
     loop: true,
     spaceBetween: 50,

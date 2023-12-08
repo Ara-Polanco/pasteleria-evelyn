@@ -16,5 +16,8 @@
         @content;
     }
 }
-
-
+@mixin grid($columnas, $gap) {
+    display: grid;
+    grid-template-columns: repeat($columnas, 1fr);
+    column-gap: $gap;
+}

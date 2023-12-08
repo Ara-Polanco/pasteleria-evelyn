@@ -1,0 +1,76 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.proceso {
+    background-color: v.$blanco;
+    padding: v.$separacion 0;
+    border-radius: 1rem;
+
+    @include m.tablet { 
+        padding: 10rem 2rem;
+        margin-top: -10rem;
+        position: relative;
+    }
+
+    .proceso__contenedor {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 3rem;
+        padding: 0 2rem;
+    }
+}
+
+.proceso__proceso {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    
+    @include m.tablet { 
+
+        flex-direction: row;
+
+        &:nth-child( even ) {
+            .proceso__contenido {
+                order: 1;
+            }
+        }
+
+        .proceso__contenido,
+        .proceso__imagen {
+            flex: 1;
+        }   
+    }
+
+    .proceso__imagen {
+        .proceso__img {
+            width: 100%;
+            object-fit: cover;
+            border-radius: 1rem;
+            @include m.tablet { 
+                height: 100%;
+            }
+            @include m.desktop { 
+                height: 30rem;
+            }
+        }
+    }
+
+    .proceso__contenido {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        .proceso__descripcion {
+            margin-bottom: 2rem;
+            padding: 0 1.5rem;
+        }
+        .proceso__texto {
+            max-width: 90%;
+        }
+    }
+}
+

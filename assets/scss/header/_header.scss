@@ -4,7 +4,6 @@
 
 .header {
     height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,.4), rgba(0,0,0,.4) ), url(/build/img/hero.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;  
@@ -16,7 +15,7 @@
 
     .header__texto {
         color: v.$rosa;
-        text-shadow: 1px 1px 1px v.$blanco;
+        text-shadow: 1px 1px 5px v.$blanco;
     }
     
     @include m.tablet { 
@@ -24,7 +23,15 @@
     }
 }
 
-
-
+.header-inicio{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/nosotros-hero.jpg);
+  
+}
+.header-nosotros {
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/hero1.jpg);
+}
+.header-proceso{
+    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/proceso-hero.jpg);
+}
 
 
