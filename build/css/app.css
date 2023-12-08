@@ -342,14 +342,15 @@ a {
   transition-duration: 0.5s;
   transition-property: font-size;
 }
-a.activo {
+a.activo, a:hover {
   color: #860A35;
-  text-shadow: 0 0 5px #fff;
+  padding: 0 0.5rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.5098039216);
 }
 
 a:hover {
   font-size: 2rem;
-  color: #860A35;
 }
 
 img {
@@ -380,6 +381,26 @@ span {
   text-transform: capitalize;
   -webkit-clip-path: polygon(100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%, 0 0);
           clip-path: polygon(100% 0, 96% 50%, 100% 100%, 0 100%, 4% 50%, 0 0);
+}
+
+.btn {
+  padding: 0.5rem 3rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: #fff;
+  color: #860A35;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  transition-duration: 0.4s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+}
+
+.btn:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
 }
 
 h1, h2, h3 {
@@ -419,9 +440,16 @@ h3 {
   position: relative;
 }
 
+.header__titulo {
+  /*   text-align: center; */
+}
 .header__titulo .header__texto {
   color: #860A35;
-  text-shadow: 1px 1px 5px #fff;
+  text-shadow: 0 0 5px #fff;
+  /*         filter: drop-shadow(0 0 5px v.$blanco); */
+  /*         background-color: rgba(255, 255, 255, 0.4);
+          border-radius: 1rem;
+          display: inline-block; */
 }
 @media (min-width: 768px) {
   .header__titulo {
@@ -430,15 +458,19 @@ h3 {
 }
 
 .header-inicio {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/build/img/nosotros-hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/nosotros-hero.jpg);
 }
 
 .header-nosotros {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/build/img/hero1.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/hero1.jpg);
 }
 
 .header-proceso {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/build/img/proceso-hero.jpg);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/proceso-hero.jpg);
+}
+
+.header-productos {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/antojos-1.jpg);
 }
 
 .navegacion {
@@ -507,27 +539,10 @@ h3 {
   margin: 0 auto;
   width: 90%;
 }
-@media (min-width: 768px) {
-  .galeria {
-    /*     flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap; */
-  }
-}
 .galeria .galeria__categoria {
   border-radius: 1rem;
   overflow: hidden;
   border: 2px solid #860A35;
-}
-@media (min-width: 768px) {
-  .galeria .galeria__categoria {
-    /*      width: 45%;       Solo para la galeria, aqui no es necesario*/
-  }
-}
-@media (min-width: 992px) {
-  .galeria .galeria__categoria {
-    /*  width: 30%; */
-  }
 }
 .galeria .galeria__categoria .galeria__img {
   transition-duration: 0.5s;
@@ -554,8 +569,65 @@ h3 {
   letter-spacing: 3px;
   padding: 1rem 0;
   position: relative;
+  display: block;
 }
 
+/* 
+.galeria {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    gap: 2.5rem;
+    margin: 0 auto;         
+    width: 90%;
+
+    @include m.tablet { 
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+
+    .galeria__categoria {
+        border-radius: 1rem;
+        overflow: hidden;
+        border: 2px solid v.$rosa;
+
+        @include m.tablet { 
+            width: 45%;       Solo para la galeria, aqui no es necesario
+        }
+        @include m.desktop { 
+            width: 30%;
+
+        }
+
+        .galeria__img {
+            transition-duration: .5s;
+            transition-property: transform;
+            width: 100%;
+            height: 25rem;
+            object-fit: cover;
+
+            @include m.tablet { 
+                height: 35rem;  
+            }
+
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+
+        .galeria__descripcion {
+            background-color: v.$rosa;
+            color: v.$blanco;
+            letter-spacing: 3px;
+            padding: 1rem 0;
+            position: relative;
+        }
+    }
+} */
 .galeria {
   width: 90%;
   position: relative;
@@ -642,7 +714,7 @@ h3 {
 }
 .testimoniales .testimoniales__contenido .testimoniales__titulo {
   margin-bottom: 5rem; /* Necesario? */
-  padding: 1rem;
+  padding: 0 1rem;
 }
 .testimoniales .testimoniales__contenido .testimoniales__testimonial {
   background-color: #F3F3F3;
@@ -835,6 +907,81 @@ h3 {
 }
 .proceso__proceso .proceso__contenido .proceso__texto {
   max-width: 90%;
+}
+
+.productos {
+  padding: 3rem; /* Mantener? */
+  background-color: #fff;
+  /*     display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; */
+  /*   gap: 2.5rem;
+    margin: 0 auto;    */
+  /*    width: 90%; */
+}
+.productos .productos__titulo {
+  margin-bottom: 5rem;
+}
+@media (min-width: 768px) {
+  .productos {
+    /*     flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap; */
+  }
+}
+.productos .productos__categoria {
+  display: flex;
+  flex-direction: column;
+  gap: 10rem; /* Cambiar a 5rem */
+}
+.productos .productos__categoria .productos__seccion {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media (min-width: 768px) {
+  .productos .productos__categoria .productos__seccion {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
+.productos .productos__categoria .productos__seccion .productos__producto {
+  border-radius: 1rem;
+  overflow: hidden;
+  border: 2px solid #860A35;
+}
+@media (min-width: 768px) {
+  .productos .productos__categoria .productos__seccion .productos__producto {
+    width: 45%;
+  }
+}
+@media (min-width: 992px) {
+  .productos .productos__categoria .productos__seccion .productos__producto {
+    width: 30%;
+  }
+}
+.productos .productos__categoria .productos__img {
+  transition-duration: 0.5s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  width: 100%;
+  height: 25rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.productos .productos__categoria .productos__img:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+.productos .productos__categoria .productos__descripcion {
+  background-color: #860A35;
+  color: #fff;
+  letter-spacing: 3px;
+  padding: 1rem 0;
+  position: relative;
 }
 
 /* 

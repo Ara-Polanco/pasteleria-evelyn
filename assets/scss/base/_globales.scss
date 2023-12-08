@@ -10,7 +10,7 @@ html {
 *,*:before, *:after {
     margin: 0;
     box-sizing: inherit;
-}
+} 
 
 body {
     font-family: v.$fuentePrincipal;
@@ -34,12 +34,14 @@ a {
 
     &.activo {
         color: v.$rosa; 
-        text-shadow: 0 0 5px v.$blanco;
+        padding: 0 .5rem;
+        border-radius: .5rem;
+        background-color: #ffffff82;
     }
 }
 a:hover {
     font-size: 2rem;
-    color: v.$rosa;   
+    @extend .activo;   
 }
 
 img {

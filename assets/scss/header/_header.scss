@@ -12,10 +12,18 @@
 }
 
 .header__titulo {
+  /*   text-align: center; */
 
     .header__texto {
         color: v.$rosa;
-        text-shadow: 1px 1px 5px v.$blanco;
+        text-shadow: 0 0 5px v.$blanco;
+/*         filter: drop-shadow(0 0 5px v.$blanco); */
+    
+/*         background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 1rem;
+        display: inline-block; */
+ 
+
     }
     
     @include m.tablet { 
@@ -24,14 +32,16 @@
 }
 
 .header-inicio{
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/nosotros-hero.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/nosotros-hero.jpg);
   
 }
 .header-nosotros {
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/hero1.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/hero1.jpg);
 }
 .header-proceso{
-    background-image: linear-gradient(rgba(0,0,0,.5), rgba(0,0,0,.5) ), url(/build/img/proceso-hero.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/proceso-hero.jpg);
 }
-
+.header-productos {
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/antojos-1.jpg);
+}
 
