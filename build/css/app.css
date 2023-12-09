@@ -413,6 +413,27 @@ span {
   outline: none;
 }
 
+.mensajeAlerta {
+  color: #860A35;
+  border: 2px solid #860A35;
+  background-color: #fff;
+  border-radius: 1.3rem;
+  padding: 0.5rem 2rem;
+  font-weight: 600;
+  font-size: 1.6rem;
+  text-align: center;
+}
+
+.correcto {
+  color: green;
+  border: 2px solid green;
+}
+
+.error {
+  border: 2px solid red;
+  color: red;
+}
+
 h1, h2, h3 {
   text-transform: capitalize;
   font-family: "Playfair Display", serif;

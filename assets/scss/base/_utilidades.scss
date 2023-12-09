@@ -41,3 +41,24 @@
     padding: .5rem 2.5rem;
     outline: none;
 }
+
+.mensajeAlerta {
+    color: v.$rosa;
+    border: 2px solid v.$rosa;  
+    background-color: v.$blanco; 
+
+    border-radius: 1.3rem;
+    padding: .5rem 2rem;
+    font-weight: 600;
+    font-size: 1.6rem;
+    text-align: center;
+}
+.correcto {
+    color: green; 
+    border: 2px solid  green;
+}
+.error {
+    border: 2px solid  red;
+    color: red;
+}
+
