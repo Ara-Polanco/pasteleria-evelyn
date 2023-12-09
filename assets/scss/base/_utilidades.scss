@@ -31,3 +31,13 @@
    transform: scale(1.1);
 }
 
+
+.contacto__input {
+    color: v.$rosa;
+    border: 2px solid v.$rosa;
+    background-color: v.$blanco; 
+    display: inline-block;
+    border-radius: 1.3rem;
+    padding: .5rem 2.5rem;
+    outline: none;
+}

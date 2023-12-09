@@ -403,6 +403,16 @@ span {
           transform: scale(1.1);
 }
 
+.contacto__input {
+  color: #860A35;
+  border: 2px solid #860A35;
+  background-color: #fff;
+  display: inline-block;
+  border-radius: 1.3rem;
+  padding: 0.5rem 2.5rem;
+  outline: none;
+}
+
 h1, h2, h3 {
   text-transform: capitalize;
   font-family: "Playfair Display", serif;
@@ -471,6 +481,10 @@ h3 {
 
 .header-productos {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/antojos-1.jpg);
+}
+
+.header__contacto {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/build/img/cheesecake-2.jpg);
 }
 
 .navegacion {
@@ -982,6 +996,93 @@ h3 {
   letter-spacing: 3px;
   padding: 1rem 0;
   position: relative;
+}
+
+.contacto {
+  background-color: #F3F3F3;
+}
+.contacto .contacto__contenedor {
+  background-color: #fff;
+  margin-top: -10rem;
+  padding: 10rem 2rem 5rem 2rem;
+  position: relative;
+  border-radius: 1rem;
+}
+.contacto .contacto__contenedor .contacto__header {
+  margin-bottom: 5rem;
+}
+
+.contacto__form {
+  margin: 0 auto;
+  max-width: 90%;
+}
+@media (min-width: 768px) {
+  .contacto__form {
+    max-width: 80%;
+  }
+}
+@media (min-width: 992px) {
+  .contacto__form {
+    max-width: 70%;
+  }
+}
+.contacto__form .contacto__inputs {
+  display: flex;
+}
+.contacto__form .contacto__inputs .contacto__row-1, .contacto__form .contacto__inputs .contacto__row-2 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  .contacto__form .contacto__inputs .contacto__row-1, .contacto__form .contacto__inputs .contacto__row-2 {
+    flex-direction: row;
+  }
+}
+.contacto__form .contacto__inputs .contacto__row-1 .contacto__input, .contacto__form .contacto__inputs .contacto__row-2 .contacto__input {
+  width: 100%;
+  font-size: 1.5rem;
+}
+@media (min-width: 768px) {
+  .contacto__form .contacto__inputs .contacto__row-1 .contacto__input, .contacto__form .contacto__inputs .contacto__row-2 .contacto__input {
+    font-size: 1.8rem;
+  }
+}
+.contacto__form .contacto__submit {
+  max-width: 45%;
+  margin: 0 auto;
+  transition-duration: 0.4s;
+  transition-property: color background-color;
+}
+.contacto__form .contacto__submit:hover {
+  background-color: #860A35;
+  color: #fff;
+}
+
+.contacto__form,
+.contacto__inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contacto__input::-webkit-input-placeholder, .contacto__msj::-webkit-input-placeholder {
+  color: #860A35;
+}
+
+.contacto__input:-ms-input-placeholder, .contacto__msj:-ms-input-placeholder {
+  color: #860A35;
+}
+
+.contacto__input::-ms-input-placeholder, .contacto__msj::-ms-input-placeholder {
+  color: #860A35;
+}
+
+.contacto__input::placeholder,
+.contacto__msj::placeholder,
+.contacto__submit {
+  color: #860A35;
 }
 
 /* 
