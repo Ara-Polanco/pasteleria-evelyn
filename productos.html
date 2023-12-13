@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--     <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -28,14 +27,40 @@
                 </div>
 
                 <nav class="navegacion">
-                    <a href="index.html" class="activo">Inicio</a>
+                    <a href="index.html" >Inicio</a>
                     <a href="nosotros.html">Nosotros</a>
-                    <a href="productos.html">Productos</a>
+                    <a class="activo" href="productos.html">Productos</a>
                     <a href="proceso.html">Proceso</a>
                     <a href="contacto.html">Contacto</a>
-            
                 </nav>
+                
+            
+
+                <div class="carrito"> <!-- cambiar por icono carrito -->
+                    
+                    <svg class="carrito__img" id="carrito__img" xmlns="http://www.w3.org/2000/svg" height="32" width="36" viewBox="0 0 576 512"><path fill=" #fff" d="M0 24C0 10.7 10.7 0 24 0H69.5c22 0 41.5 12.8 50.6 32h411c26.3 0 45.5 25 38.6 50.4l-41 152.3c-8.5 31.4-37 53.3-69.5 53.3H170.7l5.4 28.5c2.2 11.3 12.1 19.5 23.6 19.5H488c13.3 0 24 10.7 24 24s-10.7 24-24 24H199.7c-34.6 0-64.3-24.6-70.7-58.5L77.4 54.5c-.7-3.8-4-6.5-7.9-6.5H24C10.7 48 0 37.3 0 24zM128 464a48 48 0 1 1 96 0 48 48 0 1 1 -96 0zm336-48a48 48 0 1 1 0 96 48 48 0 1 1 0-96z"/></svg>
+
+                    <div id="carrito__contenido" class="carrito__contenido">
+                            
+                            <table id="lista-carrito" class=" carrito__lista  u-full-width">
+                                <thead>
+                                    <tr>
+                                        <th>Imagen</th>
+                                        <th>Nombre</th>
+                                        <th>Precio</th>
+                                        <th>Cantidad</th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody></tbody>
+                            </table>
+
+                            <a href="#" id="vaciar-carrito" class="carrito__vaciar button u-full-width">Vaciar Carrito</a>
+                    </div>
+
+                </div>
             </div>
+        
 
             <div class="header__titulo">
                 <h1 class="header__texto text-center" >¡ Disfruta tu postre favorito! </h1>
@@ -45,7 +70,7 @@
 
     <main class="productos  contenedor text-center">
 
-        <div class="productos__categoria">
+        <div class="productos__categoria" id="productos__categoria">
 
 
             <div class="productos__pasteles productos__seccion"> <!-- Inicio pasteles -->
@@ -62,7 +87,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 1</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="1">Comprar</button>
                     </div>
                 </div>
 
@@ -76,7 +101,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 2</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="2">Comprar</button>
                     </div>
                 </div>
 
@@ -90,7 +115,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 3</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="3">Comprar</button>
                     </div>
                 </div>
 
@@ -104,7 +129,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 4</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="4">Comprar</button>
                     </div>
                 </div>
 
@@ -118,7 +143,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 5</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="5">Comprar</button>
                     </div>
                 </div>
 
@@ -132,7 +157,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Pastel 6</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="6">Comprar</button>
                     </div>
                 </div>
 
@@ -152,7 +177,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Tarta 1 </p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="7">Comprar</button>
                     </div>
                 </div>
 
@@ -166,7 +191,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Tarta 2</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="8">Comprar</button>
                     </div>
                 </div>
 
@@ -180,7 +205,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Tarta 3</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="9">Comprar</button>
                     </div>
                 </div>
 
@@ -194,7 +219,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Tarta 4</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="10">Comprar</button>
                     </div>
                 </div>
 
@@ -208,7 +233,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Tarta 5</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="11">Comprar</button>
                     </div>
                 </div>
 
@@ -222,7 +247,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Tarta 6</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="12">Comprar</button>
                     </div>
                 </div>
 
@@ -240,9 +265,9 @@
                     </picture>
                     
                     <div class="productos__descripcion ">
-                        <p class="productos__nombre"> Cheesecakes 1</p>
+                        <p class="productos__nombre"> Cheesecake 1</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="13">Comprar</button>
                     </div>
                 </div>
 
@@ -254,9 +279,9 @@
                     </picture>
                     
                     <div class="productos__descripcion ">
-                        <p class="productos__nombre">Cheesecakes 2</p>
+                        <p class="productos__nombre">Cheesecake 2</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="14">Comprar</button>
                     </div>
                 </div>
 
@@ -268,9 +293,9 @@
                     </picture>
                     
                     <div class="productos__descripcion ">
-                        <p class="productos__nombre">Cheesecakes 3</p>
+                        <p class="productos__nombre">Cheesecake 3</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="15">Comprar</button>
                     </div>
                 </div>
 
@@ -282,9 +307,9 @@
                     </picture>
                     
                     <div class="productos__descripcion ">
-                        <p class="productos__nombre">Cheesecakes 4</p>
+                        <p class="productos__nombre">Cheesecake 4</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="16">Comprar</button>
                     </div>
                 </div>
 
@@ -305,7 +330,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Gelatinas 1</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="17">Comprar</button>
                     </div>
                 </div>
 
@@ -319,7 +344,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Gelatinas 2</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="18">Comprar</button>
                     </div>
                 </div>
                 <div class="productos__producto">
@@ -332,7 +357,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Gelatinas 3</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="19">Comprar</button>
                     </div>
                 </div>
 
@@ -352,7 +377,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Antojos 1</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="20">Comprar</button>
                     </div>
                 </div>
                 <div class="productos__producto">
@@ -365,7 +390,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Antojos 2</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="21">Comprar</button>
                     </div>
                 </div>
                 <div class="productos__producto">
@@ -378,7 +403,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Antojos 3</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="22">Comprar</button>
                     </div>
                 </div>
                 <div class="productos__producto">
@@ -391,7 +416,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre">Antojos 4</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="23">Comprar</button>
                     </div>
                 </div>
 
@@ -405,7 +430,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Antojos 5</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="24">Comprar</button>
                     </div>
                 </div>
 
@@ -419,7 +444,7 @@
                     <div class="productos__descripcion ">
                         <p class="productos__nombre"> Antojos 6</p>
                         <p class="productos__precio">$ <span class="productos__cantidad">550</span></p>
-                        <button class="productos__btn btn">Comprar</button>
+                        <button class="productos__btn btn" data-id="25">Comprar</button>
                     </div>
                 </div>
 
@@ -459,6 +484,8 @@
     
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="js/app.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="js/productos.js"></script>
 </body>
 </html>

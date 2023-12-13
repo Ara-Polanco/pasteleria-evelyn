@@ -3,7 +3,7 @@
 
 
 .header__barra {
-    padding: 2rem 0;
+    padding: 2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -11,7 +11,7 @@
 
     @include m.tablet { 
         flex-direction: row;
-        justify-content: space-between;  
+        justify-content: space-around;  
     }
 
     .header__logo {
@@ -27,5 +27,10 @@
         flex-direction: column;
         align-items: center;
         gap: 1rem; 
+
+        @include m.tablet { 
+            width: 8rem;
+            font-size: 2rem;
+        }
     }
 }

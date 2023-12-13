@@ -12,17 +12,10 @@
 }
 
 .header__titulo {
-  /*   text-align: center; */
 
     .header__texto {
         color: v.$rosa;
         text-shadow: 0 0 5px v.$blanco;
-/*         filter: drop-shadow(0 0 5px v.$blanco); */
-    
-/*         background-color: rgba(255, 255, 255, 0.4);
-        border-radius: 1rem;
-        display: inline-block; */
- 
 
     }
     
@@ -46,6 +39,6 @@
 }
 
 .header__contacto {
-    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/cheesecake-2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,.6), rgba(0,0,0,.6) ), url(/build/img/cheesecake.jpg);
 }
 

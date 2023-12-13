@@ -42,7 +42,15 @@ a {
 a:hover {
     font-size: 2rem;
     @extend .activo;   
+
+    @include m.tablet { 
+    font-size: 1.6rem;
+    }
+    @include m.desktop{ 
+        font-size: 2rem;
+    }
 }
+
 
 img {
     max-width: 100%;
@@ -59,5 +67,22 @@ span{
     margin: 0 auto;
 }
 
+/* Para el carrito */
+th,
+td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #E1E1E1; 
+}
+th:first-child,
+td:first-child {
+  padding-left: 0; 
+}
+th:last-child,
+td:last-child {
+  padding-right: 0; 
+}
 
-
+table {
+  margin-bottom: 2.5rem;
+}

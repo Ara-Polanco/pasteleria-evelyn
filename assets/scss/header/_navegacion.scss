@@ -10,7 +10,12 @@
     gap: .8rem;
 
     @include m.tablet { 
+        font-size: 1.4rem;
         flex-direction: row;
         gap: 2rem;
+    }
+    @include m.desktop { 
+        font-size: 1.8rem;
+
     }
 }

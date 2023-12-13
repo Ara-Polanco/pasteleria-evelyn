@@ -3,7 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!--     <link rel="preconnect" href="https://fonts.googleapis.com"> -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Petit+Formal+Script&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
@@ -20,6 +19,7 @@
 
         <div class="header__contenido contenedor">
             <div class="header__barra">
+                 
 
                 <div class="header__logo">
                     <p class="header__logo-text">Pastelería</p>
@@ -53,27 +53,53 @@
         <div class="galeria  swiper">
 
             <div class="galeria__categoria ">
-                <img  src="build/img/pastel-5.jpg" alt="Categoria pasteles" class="galeria__img ">
+
+                <picture>
+                    <source class="galeria__img " srcset="build/img/pastel-5.avif" type="image/avif">
+                    <source class="galeria__img " srcset="build/img/pastel-5.webp" type="image/webp">
+                    <img loading="lazy" src="build/img/pastel-5.jpg"class="galeria__img " alt="Categoria pasteles">
+                </picture>
+
                 <a href="/productos.html#pasteles" class="galeria__descripcion ">Ir a pasteles</a>
             </div>
 
             <div class="galeria__categoria   ">
-                <img src="build/img/tarta-3.jpg" alt="Categoria pasteles"   class="galeria__img ">
+                <picture>
+                    <source class="galeria__img"  srcset="build/img/tarta-3.avif" type="image/avif">
+                    <source class="galeria__img"  srcset="build/img/tarta-3.webp" type="image/webp">
+                    <img class="galeria__img"  loading="lazy" src="build/img/tarta-3.jpg" alt="Categoria tartas">
+                </picture>
+
                 <a href="/productos.html#tartas" class="galeria__descripcion">Ir a tartas</a>
             </div>
 
             <div class="galeria__categoria  ">
-                <img  src="build/img/cheesecake.jpg" alt="Categoria pasteles" class="galeria__img ">
+
+                <picture>
+                    <source class="galeria__img" srcset="build/img/cheesecake.avif" type="image/avif">
+                    <source class="galeria__img" srcset="build/img/cheesecake.webp" type="image/webp">
+                    <img class="galeria__img" loading="lazy" src="build/img/cheesecake.jpg" alt="Categoria cheesecake">
+                </picture>
+
                 <a href="/productos.html#cheesecake" class="galeria__descripcion">Ir a cheesecake</a>
             </div>
 
             <div class="galeria__categoria ">
-                <img  src="build/img/gelatina-1.jpg" alt="Categoria pasteles" class="galeria__img ">
+                <picture>
+                    <source class="galeria__img" srcset="build/img/gelatina-1.avif" type="image/avif">
+                    <source class="galeria__img" srcset="build/img/gelatina-1.webp" type="image/webp">
+                    <img class="galeria__img" loading="lazy" src="build/img/gelatina-1.jpg" alt="Categoria gelatinas">
+                </picture>
                 <a href="/productos.html#gelatinas" class="galeria__descripcion">Ir a gelatinas</a>
             </div>
 
             <div class="galeria__categoria">
-                <img  src="build/img/antojos-1.jpg" alt="Categoria pasteles" class="galeria__img ">
+                <picture>
+                    <source class="galeria__img" srcset="build/img/antojos-1.avif" type="image/avif">
+                    <source class="galeria__img" srcset="build/img/antojos-1.webp" type="image/webp">
+                    <img class="galeria__img" loading="lazy" src="build/img/antojos-1.jpg" alt="Categoria antojos">
+                </picture>
+
                 <a href="/productos.html#antojos" class="galeria__descripcion">Ir a antojos</a>
             </div>
         </div>
@@ -90,7 +116,11 @@
                 <p class="sucursales__texto text-center"><span>Más de 30 sucursales</span> en la Zona Metropolitana de Guadalajara. La mejor cobertura para entrega a domicilio sin costo*. </p>
                 
                 <div class="sucursales__imagen">
-                    <img src="build/img/pastel-cumple.jpg" alt="Imagen pastel cumpleaños" class="sucursales__img">
+                    <picture>
+                        <source class="sucursales__img" srcset="build/img/pastel-cumple.avif" type="image/avif">
+                        <source class="sucursales__img" srcset="build/img/pastel-cumple.webp" type="image/webp">
+                        <img class="sucursales__img" loading="lazy" src="build/img/pastel-cumple.jpg" alt="Imagen de cumpleaños">
+                    </picture>
                 </div>
         </div>
     </section>
@@ -104,7 +134,6 @@
                     <p class="testimoniales__texto text-center"> Si quieres un postre ligero, pero sin dejar de lado el sabor, estás en lugar indicado. Lleváte un mimo delicioso para festejar un cumpleaños, un reencuentro o simplemente para hacer una pausa en el día, sin remordimientos. </p>
 
                 </blockquote>
-
                 <p class="testimoniales__autor">- Hanny Polanco</p>
             </div>
 

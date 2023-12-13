@@ -6,6 +6,13 @@
     padding: v.$separacion 3rem;
     background-color: v.$blanco;
 
+    @include m.tablet { 
+        padding: 10rem 2rem v.$separacion 2rem;
+        margin-top: -10rem;
+        position: relative;
+        border-radius: 1rem;
+    }
+ 
     .nosotros__titulo {
         margin-bottom: v.$separacion;
         padding: 0 1rem;
