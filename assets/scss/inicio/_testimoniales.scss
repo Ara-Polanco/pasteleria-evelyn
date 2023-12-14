@@ -8,7 +8,7 @@
 
         background-color: v.$blanco;
         padding: v.$separacion 3rem;
-        border-radius: 1rem;    /* Convervar? */
+        border-radius: 1rem;   
 
         @include m.tablet { 
             margin-top: -10rem;
@@ -17,7 +17,7 @@
 
 
         .testimoniales__titulo{
-            margin-bottom: 5rem; /* Necesario? */
+            margin-bottom: 5rem;
             padding: 0 1rem;
         }
     
