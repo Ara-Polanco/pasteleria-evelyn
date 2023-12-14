@@ -3,6 +3,7 @@ const {src, dest, watch, series, parallel } = require('gulp')
 const sass = require('gulp-sass') (require('sass'))
 const postcss = require('gulp-postcss')
 const autoprefixer = require('autoprefixer')
+const sourcemaps = require('gulp-sourcemaps')
 
 const imagemin = require('gulp-imagemin')
 const webp = require('gulp-webp')
@@ -10,8 +11,10 @@ const avif = require('gulp-avif')
 
 function css(done) {
     src('assets/scss/app.scss')
-        .pipe( sass(  ))
+        .pipe( sourcemaps.init())
+        .pipe( sass( ) )
         .pipe( postcss( [autoprefixer() ] ) )
+        .pipe( sourcemaps.write('.'))
         .pipe(dest('build/css'))
     done()
 
@@ -39,6 +42,7 @@ function versionAvif() {
     return src('assets/img/**/*.{png,jpg}')
             .pipe( avif(opciones))
             .pipe( dest('assets/img'))
+
 }
 
 function dev(){

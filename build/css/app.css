@@ -561,14 +561,14 @@ h3 {
   position: relative;
 }
 
-.header__titulo .header__texto {
-  color: #860A35;
-  text-shadow: 0 0 5px #fff;
-}
 @media (min-width: 768px) {
   .header__titulo {
     padding: 10rem 0 0 0;
   }
+}
+.header__titulo .header__texto {
+  color: #860A35;
+  text-shadow: 0 0 5px #fff;
 }
 
 .header-inicio {
@@ -1123,7 +1123,7 @@ h3 {
 .carrito:hover .carrito__contenido {
   display: block;
   position: absolute;
-  right: 0;
+  right: -550%;
   top: 100%;
   z-index: 1;
   background-color: #fff;
@@ -1131,16 +1131,26 @@ h3 {
   min-height: 400px;
   min-width: 300px;
 }
+@media (min-width: 768px) {
+  .carrito:hover .carrito__contenido {
+    right: 0;
+  }
+}
 
 .contacto {
   background-color: #F3F3F3;
 }
 .contacto .contacto__contenedor {
   background-color: #fff;
-  margin-top: -10rem;
-  padding: 10rem 2rem 5rem 2rem;
-  position: relative;
-  border-radius: 1rem;
+  padding: 5rem 2rem;
+}
+@media (min-width: 768px) {
+  .contacto .contacto__contenedor {
+    padding: 10rem 2rem 5rem 2rem;
+    margin-top: -10rem;
+    position: relative;
+    border-radius: 1rem;
+  }
 }
 .contacto .contacto__contenedor .contacto__header {
   margin-bottom: 5rem;
@@ -1232,3 +1242,4 @@ h3 {
 @use 'footer/footer';
 
 */
+/*# sourceMappingURL=app.css.map */

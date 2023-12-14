@@ -13,15 +13,16 @@
 
 .header__titulo {
 
+    @include m.tablet { 
+        padding: 10rem 0 0 0;
+    }
+    
     .header__texto {
         color: v.$rosa;
         text-shadow: 0 0 5px v.$blanco;
 
     }
     
-    @include m.tablet { 
-        padding: 10rem 0 0 0;
-    }
 }
 
 .header-inicio{

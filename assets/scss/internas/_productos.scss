@@ -80,12 +80,15 @@
 .carrito:hover  .carrito__contenido{
     display: block;
     position: absolute;
-    right:0;
-
+    right: -550%;
     top:100%;
     z-index: 1;
     background-color: v.$blanco;
     padding: 20px;
     min-height: 400px;
     min-width: 300px;
+
+    @include m.tablet { 
+        right: 0;
+    }
 }
