@@ -53,19 +53,23 @@ function leerDatosProducto(productoSeleccionado) {
         /* Solo actualizamos la cantidad */
         const productos = productosCarrito.map( producto => {
             if( producto.id === infoProducto.id ) {
+             
                 producto.cantidad++
+                producto.precio = parseInt(infoProducto.precio)
+                producto.precio = producto.precio * producto.cantidad
                 return producto     /* Devuelve el producto del carrito con la cantidad actualizada */
             } else {
                 return producto /* Devuelve los demas elementos del carrito que no han sido duplicados */
             }
         })
+
         productosCarrito = [...productos]
     } else {
         /* Agregamos el producto al carrito */
         productosCarrito = [...productosCarrito, infoProducto]
     }
+
     carritoHTML()
-   /*  console.log(productosCarrito) */
 }
 
 /* Mostrar el carrito de compras en el HTML */
@@ -125,7 +129,11 @@ function eliminarProducto(e) {
             if(productoId === producto.id) {
                 /* Si existe mas de un producto en el carrito, le eliminamos una unidad */
                 if(producto.cantidad > 1) {
+                    let precioUnitario = producto.precio / producto.cantidad
+
                     producto.cantidad--
+
+                    producto.precio = precioUnitario * producto.cantidad
                 } else {
                     /* Si no existe mas de 1 unidad, se elimina el prodcuto por completo */
                     productosCarrito = productosCarrito.filter( producto => producto.id !== productoId)
